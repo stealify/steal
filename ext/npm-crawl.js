@@ -687,15 +687,19 @@ utils.extend(FetchTask.prototype, {
 
 				if (!parentAddress) {
 					var found = this.getPackage();
+					if (found) {
+						// Accept what we found no care
+					} else {
+						throw new Error(
+							[
+								"Did not find " + pkg.origFileUrl,
+								"Unable to find a compatible version of " + pkg.name,
+								"Wanted: " + pkg.version,
+								found ? "Found: " + found.version : ""
+							].join("\n")
+						);
+					}
 
-					throw new Error(
-						[
-							"Did not find " + pkg.origFileUrl,
-							"Unable to find a compatible version of " + pkg.name,
-							"Wanted: " + pkg.version,
-							found ? "Found: " + found.version : ""
-						].join("\n")
-					);
 				}
 			}
 
