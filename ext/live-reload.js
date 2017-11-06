@@ -270,6 +270,12 @@ function addLiveReload(loader) {
 			return;
 		}
 
+		// Disable that as it don't works need to talk to math about
+		// why he is using a global that don't exists where does he expect that to come from?
+		return
+
+
+
 		var port = loader.liveReloadPort || 8012;
 
 		var host = loader.liveReloadHost || window.document.location.host.replace(/:.*/, '');
