@@ -1,4 +1,15 @@
-# steal
+# stealify-loader & stealify-packager
+
+
+## How it Works?
+- You Specify files to include in your bundle 
+- tools specify files to include in your bundle
+- your bundle gets loaded 
+
+
+
+
+
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/stealjs/steal?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
